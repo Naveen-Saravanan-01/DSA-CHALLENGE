@@ -1,0 +1,19 @@
+//Given a number n. Count the number of digits in n which evenly divide n. Return an integer, total number of digits of n which divides n evenly.
+
+class Solution{
+    static int evenlyDivides(int N){
+        // code here
+        int count=0,rem;
+        int temp=N;
+        while(N!=0){
+            rem=N%10;
+            N/=10;
+             if(rem==0)
+            continue;
+            if(temp%rem==0)
+            count++;
+           
+        }
+        return count;
+    }
+}
