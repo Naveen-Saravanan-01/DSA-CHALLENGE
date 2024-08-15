@@ -1,0 +1,19 @@
+class Solution{
+public static Long[] lcmAndGcd(Long a,Long b){
+ 
+Long gcd=findGcd(a,b);
+Long lcm=(a*b)/gcd;
+
+return new Long[]{lcm,gcd};
+
+}
+
+private static Long findGcd(Long a,Long b){
+while(b!=0){
+Long temp=b;
+b=a%b;
+a=temp;
+}
+return a;
+}
+}
