@@ -1,0 +1,16 @@
+class Solution{
+    static long sumOfDivisors(int N){
+        // code here
+         long sum = 0;
+
+        // Iterate over each number from 1 to N
+        for (long i = 1; i <= N; i++) {
+            // For each i, find its divisors and add them to the sum
+            for (long j = i; j <= N; j += i) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+}
