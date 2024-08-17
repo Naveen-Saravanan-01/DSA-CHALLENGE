@@ -1,0 +1,19 @@
+class Solution {
+    static ArrayList<Long> factorialNumbers(long n) {
+        // code here
+        
+          ArrayList<Long> result = new ArrayList<>();
+        generateFactorials(n, 1, 1, result);
+        return result;
+    }
+
+    private static void generateFactorials(long n, int i, long currentFactorial, List<Long> result) {
+        if (currentFactorial > n) {
+            return;
+        }
+
+        result.add(currentFactorial);
+
+        generateFactorials(n, i + 1, currentFactorial * (i + 1), result);
+    }
+}
